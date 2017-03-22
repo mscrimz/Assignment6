@@ -3,6 +3,7 @@ package messages;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.logging.Level;
@@ -20,6 +21,7 @@ public class MessageController {
     private List<Message> messages;
 
     public MessageController() {
+        messages = new ArrayList<>();
     }
 
     public JsonArray getAllJson() {
