@@ -85,7 +85,7 @@ public class MessageController {
     public void removeFromDb(Message m) {
         try {
             Connection conn = DBUtils.getConnection();
-            PreparedStatement pstmt = conn.prepareStatement("DELETE FROM message WHERE id = ?");
+            PreparedStatement pstmt = conn.prepareStatement("DELETE FROM messages WHERE id = ?");
             pstmt.setInt(1, m.getId());
             pstmt.executeUpdate();
             conn.close();
