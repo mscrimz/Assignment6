@@ -133,6 +133,7 @@ public class MessageController {
 
     public JsonObject addJson(JsonObject json) {
         Message m = new Message(json);
+        persistToDb(m);
         messages.add(m);
         return m.toJson();
     }
@@ -149,12 +150,14 @@ public class MessageController {
             m.setSenttime(new Date());
             Logger.getLogger(Message.class.getName()).log(Level.SEVERE, null, "Failed Parsing Date: " + timeStr);
         }
+        persistToDb(m);
         return m.toJson();
     }
 
     public boolean deleteById(int id) {
         Message m = getById(id);
         if (m != null) {
+            removeFromDb(m);
             messages.remove(m);
             return true;
         } else {
