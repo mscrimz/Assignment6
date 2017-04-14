@@ -1,4 +1,3 @@
-
 package messages;
 
 import java.text.ParseException;
@@ -21,7 +20,7 @@ public class Message {
     public Message() {
     }
 
-    public Message(JsonObject json) {        
+    public Message(JsonObject json) {
         id = json.getInt("id", 0);
         title = json.getString("title", "");
         contents = json.getString("contents", "");

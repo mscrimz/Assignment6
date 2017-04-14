@@ -16,11 +16,10 @@ import javax.enterprise.context.ApplicationScoped;
  *
  * @author c0687799
  */
-
 @ApplicationScoped
 public class DBUtils {
 
- private final static String studentNumber = "c0121833";
+    private final static String studentNumber = "c0121833";
 
     /**
      * Utility method used to create a Database Connection

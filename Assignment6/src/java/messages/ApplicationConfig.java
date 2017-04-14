@@ -9,7 +9,6 @@ import java.util.Set;
 import javax.faces.bean.ApplicationScoped;
 import javax.ws.rs.core.Application;
 
-
 @javax.ws.rs.ApplicationPath("m")
 public class ApplicationConfig extends Application {
 
@@ -23,5 +22,5 @@ public class ApplicationConfig extends Application {
     private void addRestResourceClasses(Set<Class<?>> resources) {
         resources.add(messages.MessageService.class);
     }
-    
+
 }

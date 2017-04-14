@@ -1,4 +1,3 @@
-
 package messages;
 
 import java.sql.Connection;
@@ -81,7 +80,7 @@ public class MessageController {
             Logger.getLogger(MessageController.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    
+
     public void removeFromDb(Message m) {
         try {
             Connection conn = DBUtils.getConnection();
